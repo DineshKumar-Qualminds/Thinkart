@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Thinkart.css">
+    <script src="https://kit.fontawesome.com/05522630cc.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- <nav class="header">
+            <div class="logo">
+            <h1 class="logoname">Thinkart</h1>
+        </div>
+        <div class="nav-items">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a ><i class="fa-solid fa-cart-plus"></i></a></li>
+                <li><a><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+        </div>
+        </nav> -->
+        <div class="add-items">
+            <h1>Welcome to Thinkart</h1>
+            <button class="add-btn" id="addBtn">ADD</button>
+        </div>
+
+
+        <!-- Add-Products -->
+        <div id="add-product" class="model">
+            <div>
+             <a href="#" class="close">X</a>
+            </div>
+            <div class="product-content">
+                <div class="wrapper">
+                    <form> 
+                        <div>
+                            <label>Product-Name</label>
+                            <div><input type="text" id="name"/></div>             
+                        </div>
+                        <div>
+                            <label>Description</label>
+                            <div><textarea id="description"></textarea></div>             
+                        </div>
+                        <div>
+                            <label>Image Url</label>
+                            <div><input type="text" id="image"/></div>             
+                        </div>
+                        
+                        <div>
+                            <label>Price</label>
+                            <div><input type="text" id="price"/></div>             
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="add-post" id="add-postbtn">Add-Post</button>
+                            <button  class="close">Cancle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Updating Model -->
+        <div id="update-model" class="model">
+            <div>
+                <a href="#" class="close">X</a>
+            </div>
+            <div class="product-content">
+                <div class="wrapper">
+                    <form> 
+                        <div>
+                            <label>Product-Name</label>
+                            <div><input type="text" id="updatedName"/></div>             
+                        </div>
+                        <div>
+                            <label>Description</label>
+                            <div><textarea id="updatedDescription"></textarea></div>             
+                        </div>
+                        <div>
+                            <label>Image Url</label>
+                            <div><input type="text" id="updatedImage"/></div>             
+                        </div>
+                        
+                        <div>
+                            <label>Price</label>
+                            <div><input type="text" id="updatedPrice"/></div>             
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="add-post" id="add-postbtn">Updated-Post</button>
+                            <button  class="close">Cancle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+        <div class="table-container">
+            <table class="table-section">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Product-Id</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Product-Image</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="table-results">
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+                </table>
+             </table>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="Thinkart.js"></script>
+</body>
+</html>
