@@ -6,7 +6,7 @@
     margin: 0px;
 }
 .container{
-    background-color: #fffeaf;
+    background-color:aqua;
     background-size: cover;
     /* position: relative; */
 }
@@ -63,30 +63,48 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
 .card {
-  background-color: #fcf700;
   margin: 10px;
-  padding: 20px;
+  padding: 15px;
   width: 30%;
+  box-shadow:2px 5px 2px orange ;
 }
 img{
-    height:300px;
-    width:300px;
+    height:200px;
 }
 
-h2{
-    font-size: 25px;
-    font-family:'Times New Roman', Times, serif; 
+/* h2{
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif; 
     font-weight: bold;
-
-
+    padding-top: 10px;
+} */
+.item-name{
+    font-size: 22px;
+    font-family:Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+    padding-top: 10px;
+    height: 60px;
+    
 }
-p{
+
+.description{
+    max-height:50px;
+    font-size: 18px;
+    /* overflow: hidden; */
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    margin-top: 10px;
+    /* text-overflow: ellipsis; */
+}
+.price{
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-    overflow: auto;
+    font-style: italic;
+    font-weight: bold;
+
 }
+
 .buttonContainer{
     display: flex;
     justify-content: space-around;
@@ -116,8 +134,51 @@ button{
     width: 30%;
     margin-left: 30px;
     margin-right:-70%;
+
 }
+/* }
 .dropdown-profile{
     position: relative;
     display: inline-block;
 }
+.dropdown-content li a{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 140px;
+    box-shadow: 0px 8px 13px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/* .dropdown-content li a{
+    display:block;
+    text-decoration:none;
+    color:black;
+} */
+
+/* .dropdown-profile .dropdown-content:hover{
+    display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+} */
+/* 
+.dropdown-content li a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-profile:hover .dropdown-content li a{
+    background-color: #ddd;
+    display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+  
+.dropdown-profile:hover .dropdown-content {
+    display: block;
+} */

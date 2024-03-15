@@ -61,6 +61,7 @@ renderCard(product);
 function createCard(product) {
     const card = document.createElement('div');
     card.classList.add('card');
+    card.style.backgroundColor = '#f0ff8c';
 
     
     const image = document.createElement('img');
@@ -70,14 +71,44 @@ function createCard(product) {
 
     const name = document.createElement('h2');
     name.textContent = product.name;
+    name.classList.add('item-name')
     card.appendChild(name);
 
     const description = document.createElement('p');
     description.textContent = product.description;
+    description.classList.add("description");
+    description.setAttribute('id','descriptionId')
     card.appendChild(description);
+
+    const readMore = document.createElement('a');
+    // readMore.setAttribute('href',"readMore")
+    readMore.textContent = "Readmore";
+    readMore.setAttribute('id',"readMore");
+    readMore.addEventListener('click', function() {
+        if(description.length>200){
+            description.style.display = "block"
+        }else{
+            if (description.style.display === 'none') {
+                description.style.display = 'block';
+                description.style.paddingBottom="120px";
+                readMore.textContent = "Read less";
+            } else {
+                description.style.display = 'none';
+                readMore.textContent = "Read more";
+            }
+
+        }
+       
+    });
+    card.appendChild(readMore);
+    
+  
+    description.style.display = 'none';
+
 
     const price = document.createElement('p');
     price.textContent = product.price;
+    price.classList.add("price");
     card.appendChild(price);
 
     const buttonContainer = document.createElement('div');
@@ -103,6 +134,9 @@ function createCard(product) {
     
 }
 
+
+
+
 function addToCart(product) {
     cartItems.push(product);
     updateCartQuantity();
@@ -113,8 +147,6 @@ function updateCartQuantity(event) {
     quantityDisplay.textContent = cartItems.length;
     
 }
-
-
 
 
 function renderCart() {
@@ -279,7 +311,7 @@ function renderCart() {
     function updateCartTotal() {
         total = 0; // Reset total before updating
         itemMap.forEach(item => {
-            total += parseFloat(item.price.replace('₹', '')) * item.quantity; // Use item.price directly for calculation
+            total += parseFloat(item.price.replace('₹', '')) * item.quantity; 
         });
         totalAmountCell.textContent = total.toFixed(2);
     }
